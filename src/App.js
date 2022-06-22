@@ -1,23 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+import AddItem from './components/addItem';
+import Display from './components/display'
+
 
 function App() {
+
+
+  const [addingItems, setAddingItems] = useState([]);
+  const addEmployee = ((name,firstName,surname,email)=>{
+
+
+    setAddingItems((name)=> [...name,{
+
+      name:name,
+      firsName:firstName,
+      surname:surname,
+      email:email
+
+    }])
+
+
+console.log(addingItems);
+  })
+
+  
+
+
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Display list={addingItems}/>
+
+      <AddItem add={addEmployee}/>
+      
     </div>
   );
 }
