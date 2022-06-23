@@ -6,3 +6,12 @@
 
 
 }
+.container{
+  justify-content: center;
+  background-color: gray;
+  align-items: center;
+  margin-left: 300px;
+  margin-top:20px;
+  width:450px;
+  margin-top:150px;
+}

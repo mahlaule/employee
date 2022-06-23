@@ -1,26 +1,43 @@
+import React from 'react';
+import "../css/display.css"
 
-import React from "react"
 
 
 function Display(props){
+
+   
 return(
+   
 
 <div>
-{props.list.map((name)=> {
+{props.list.map((name)=> (
     <div>
-
+        
     <div className="employeee">
+        <div>
         <h1>{name.name}</h1>
-        <h2>{name.firstName}</h2>
+
+        </div>
+        <div>
+        <h1>{name.firstName}</h1>
+        </div>
+        <div>
         <h1>{name.surname}</h1>
+        </div>
+        <div>
         <h1>{name.email}</h1>
-        </div>
 
         </div>
+        </div>
+        </div>
+        
+        
+
+        
+
+))}
 
 
-
-})}
 
 </div>
 

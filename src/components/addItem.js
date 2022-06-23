@@ -4,7 +4,8 @@ function AddItem (props){
     const[name, setName]= useState('');
     const[firstName, setFirstName]= useState("");
     const [surname, setSurname] = useState("");
-    const [email, setEmail] = useState("")
+    const [email, setEmail] = useState("");
+ 
 
    const add =(()=>{
 
@@ -15,11 +16,13 @@ function AddItem (props){
 props.add(name,firstName,surname,email);
    })
 
+   
+ 
+   
 
         
        
-
-
+ 
      
   
     
@@ -28,7 +31,7 @@ props.add(name,firstName,surname,email);
 return(
 
 
-    <div>
+    <div  className="container">
 
         <h1>new employee</h1>
 
@@ -37,26 +40,21 @@ return(
 <input placeholder="enter Surname" onChange={(e)=>setSurname(e.target.value)}/><br></br>
 <input placeholder="enter email"  onChange={(e)=> setEmail(e.target.value)}/><br></br>
 
+
 <button id="btn"onClick={add}>add employee</button>
 <button id="btn">update</button>
 <button id ="btn">delete</button>
 
 
+      </div>
+    
+        
 
-
-    </div>
-
-
-
-
-)
-
-
-
-
-
-
-
+);
 }
+    
 
-export default AddItem;
+
+
+
+export default AddItem
